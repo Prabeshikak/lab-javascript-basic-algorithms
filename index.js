@@ -52,3 +52,33 @@ if (result < 0) {
 } else {
   console.log(`what?! You both have same name?`);
 }
+
+/*let phraseToCheck = "consectetur";
+let reverseStr = "";
+for (let i = phraseToCheck.length - 1; i >= 0; i--) {
+  reverseStr += phraseToCheck[i];
+
+  if (reverseStr === phraseToCheck) {
+    console.log("they are palimdrome");
+  } else {
+    console.log("They are not!");
+  }
+}
+*/
+
+let phraseToCheck = "racecar";
+let reverseStr = "";
+for (let i = phraseToCheck.length - 1; i >= 0; i--) {
+  reverseStr += phraseToCheck[i];
+}
+
+reverseStr = reverseStr.toLowerCase();
+phraseToCheck = phraseToCheck.toLowerCase();
+
+console.log(reverseStr);
+
+if (phraseToCheck === reverseStr) {
+  console.log("they are palindrome");
+} else {
+  console.log("They are not!");
+}
