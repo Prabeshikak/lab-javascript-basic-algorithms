@@ -53,18 +53,7 @@ if (result < 0) {
   console.log(`what?! You both have same name?`);
 }
 
-/*let phraseToCheck = "consectetur";
-let reverseStr = "";
-for (let i = phraseToCheck.length - 1; i >= 0; i--) {
-  reverseStr += phraseToCheck[i];
-
-  if (reverseStr === phraseToCheck) {
-    console.log("they are palimdrome");
-  } else {
-    console.log("They are not!");
-  }
-}
-*/
+// Bonus :2 Palindrome Check
 
 let phraseToCheck = "racecar";
 let reverseStr = "";
@@ -82,3 +71,31 @@ if (phraseToCheck === reverseStr) {
 } else {
   console.log("They are not!");
 }
+
+// Bonus:1 Count the number of words in the string.
+const longText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. Pretium lectus quam id leo in vitae turpis massa. Vitae purus faucibus ornare suspendisse sed nisi. Auctor augue mauris augue neque gravida. Integer malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Elementum tempus egestas sed sed risus pretium. Et tortor at risus viverra adipiscing at in. Sagittis aliquam malesuada bibendum arcu vitae elementum. Molestie a iaculis at erat. Sit amet nisl suscipit adipiscing bibendum est ultricies. Aliquam etiam erat velit scelerisque in. Sed augue lacus viverra vitae congue eu consequat ac. Habitant morbi tristique senectus et netus et malesuada. At volutpat diam ut venenatis. Urna condimentum mattis pellentesque id nibh tortor. Ut eu sem integer vitae justo eget magna fermentum. A pellentesque sit amet porttitor eget. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar.";
+
+let wordCount = 1;
+
+for (let i = 0; i < longText.length; i++) {
+  // Check if the current character is a space
+  if (longText[i] === " ") {
+    wordCount++;
+  }
+}
+
+console.log(`The number of words in the sentence is: ${wordCount}`);
+
+//Bonus:1 Count the number of times the Latin word 'et' appears.
+
+let etCount = 0;
+
+for (let i = 0; i < longText.length; i++) {
+  // Check for the start of the Latin word "et"
+  if (longText.substring(i, i + 2).toLowerCase() === "et") {
+    etCount++;
+  }
+}
+
+console.log(`The Latin word "et" appears ${etCount} times in the string.`);
